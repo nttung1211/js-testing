@@ -22,7 +22,7 @@ const testFetch = vi.fn((url, options) => {
   });
 });
 
-vi.stubGlobal('fetch', testFetch);
+vi.stubGlobal('fetch', testFetch); // to mock global objects that are not imported from a module
 
 it('should return any available response data', () => {
   const testData = { key: 'test' };
